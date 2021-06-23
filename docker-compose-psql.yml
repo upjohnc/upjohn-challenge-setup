@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  postgres:
+    build:
+      context: .
+      dockerfile: Dockerfile-postgres
+    environment:
+      POSTGRES_USER: amino_user
+      POSTGRES_PASSWORD: thing
+      POSTGRES_DB: amino
+
+    ports:
+      - "5433:5432"
+

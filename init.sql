@@ -1,0 +1,12 @@
+CREATE USER amino_user;
+
+CREATE PASSWORD thing;
+
+DROP ROLE IF EXISTS amino_role;
+
+CREATE ROLE amino_role;
+
+CREATE DATABASE IF NOT EXISTS amino;
+
+GRANT ALL PRIVILEGES ON DATABASE amino TO amino_role;
+

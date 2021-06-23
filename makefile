@@ -14,5 +14,11 @@ isort:
 run:
 > docker compose run amino && docker compose down
 
-mypy:
-> mypy $(root_dir)
+my_psql:
+> psql -p 5433 -h localhost -U amino_user -d amino -W
+
+start_psql:
+> docker compose -f docker-compose-psql.yml up
+
+down_psql:
+> docker compose -f docker-compose-psql.yml down
